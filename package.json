@@ -1,0 +1,42 @@
+{
+  "name": "@frebliklo/bookmark-landing",
+  "version": "1.0.0",
+  "description": "Challenge from frontendmentor.io",
+  "main": "src/app.js",
+  "repository": "https://github.com/frebliklo/bookmark-landing",
+  "author": "Frederik Blichert Klovborg",
+  "license": "MIT",
+  "scripts": {
+    "start": "npm run dev",
+    "dev": "webpack-dev-server  --config webpack.dev.js --open",
+    "serve": "weboack-dev-server --config webpack.dev.js --host 0.0.0.0 --open",
+    "build": "webpack --config webpack.prod.js"
+  },
+  "dependencies": {
+    "@babel/core": "^7.8.4",
+    "@babel/preset-env": "^7.8.4",
+    "autoprefixer": "^9.7.4",
+    "babel-loader": "^8.0.6",
+    "clean-webpack-plugin": "^3.0.0",
+    "css-loader": "^3.4.2",
+    "file-loader": "^5.0.2",
+    "html-loader": "^0.5.5",
+    "html-webpack-plugin": "^3.2.0",
+    "mini-css-extract-plugin": "^0.9.0",
+    "node-sass": "^4.13.1",
+    "optimize-css-assets-webpack-plugin": "^5.0.3",
+    "postcss-loader": "^3.0.0",
+    "sass-loader": "^8.0.2",
+    "style-loader": "^1.1.3",
+    "webpack": "^4.41.5",
+    "webpack-cli": "^3.3.10",
+    "webpack-dev-server": "^3.10.3",
+    "webpack-merge": "^4.2.2"
+  },
+  "browserslist": [
+    "last 2 version, not Opera 43, not ie_mob 10, not Opera 42",
+    "> 1%",
+    "maintained node versions",
+    "not dead"
+  ]
+}

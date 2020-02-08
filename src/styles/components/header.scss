@@ -1,0 +1,62 @@
+$gutter: 72px;
+
+.header {
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: center;
+  align-items: center;
+
+  @include respond(tab-land) {
+    flex-direction: row;
+  }
+
+  &__left {
+    margin: 0;
+    padding: 1rem;
+
+    @include respond(tab-land) {
+      margin-right: $gutter;
+    }
+
+    &--content {
+      width: 100%;
+
+      @include respond(tab-land) {
+        margin-left: auto;
+        max-width: (($container-max-width / 2) - ($gutter / 2));
+      }
+    }
+  }
+
+  &__right {
+    @include bg-pill-right;
+
+    & > svg {
+      width: 100%;
+
+      @include respond(tab-land) {
+        width: 85%;
+      }
+    }
+  }
+
+  &__left,
+  &__right {
+    flex: 1;
+  }
+
+  &__title,
+  &__text {
+    margin-bottom: 2rem;
+  }
+
+  &__text {
+    color: $color-secondary-grey;
+  }
+
+  &__button-group {
+    .button + .button {
+      margin-left: 0.75rem;
+    }
+  }
+}

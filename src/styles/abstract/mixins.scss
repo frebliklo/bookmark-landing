@@ -1,0 +1,55 @@
+@mixin respond($breakpoint) {
+  @if $breakpoint == tab-port {
+    @media (min-width: 45em) {
+      @content;
+    }
+  }
+  @if $breakpoint == tab-land {
+    @media (min-width: 75em) {
+      @content;
+    }
+  }
+  @if $breakpoint == big-desktop {
+    @media (min-width: 112.5em) {
+      @content;
+    }
+  }
+}
+
+@mixin bg-pill-right {
+  position: relative;
+
+  &::after {
+    content: '';
+    position: absolute;
+    width: 75%;
+    height: 80%;
+    background: $color-primary-blue;
+    top: auto;
+    right: 0;
+    bottom: -10%;
+    left: auto;
+    border-top-left-radius: 200px;
+    border-bottom-left-radius: 200px;
+    z-index: -1;
+  }
+}
+
+@mixin bg-pill-left {
+  position: relative;
+
+  &::after {
+    content: '';
+    position: absolute;
+    width: 75%;
+    height: 80%;
+    background: $color-primary-blue;
+    top: auto;
+    right: auto;
+    bottom: -10%;
+    left: 0;
+    border-top-right-radius: 200px;
+    border-bottom-right-radius: 200px;
+    z-index: -1;
+  }
+}
